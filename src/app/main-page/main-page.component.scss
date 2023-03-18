@@ -1,0 +1,30 @@
+.myContainer {
+  background-image: url("../../assets/background_page.png");
+  // width: 100%;
+  height: 100vh;
+
+  .textconf {
+    font-family: 'Pixellari';
+
+    font-size: 16px;
+    line-height: 17px;
+
+
+    color: #FFFFFF;
+  }
+}
+
+::ng-deep{
+
+
+  .mat-mdc-form-field .mdc-text-field{
+    color: white !important;
+    border: 1px solid white !important;
+    border-radius: 8px !important;
+    background-color: transparent !important;
+    .mdc-floating-label, .mdc-text-field__input{
+      color: white;
+    }
+  }
+
+}

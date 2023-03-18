@@ -1,0 +1,35 @@
+<div class="myContainer d-flex align-items-center justify-content-center">
+  <section>
+    <form class="d-flex flex-column"  [formGroup]="form">
+      <mat-form-field class="example-form-field">
+        <mat-label>Digite seu nome</mat-label>
+        <input matInput type="text" [(ngModel)]="form.value.name" formControlName="name">
+        <button *ngIf="form.value.name" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.name=''">
+          <mat-icon>close</mat-icon>
+        </button>
+
+      </mat-form-field>
+      <mat-form-field class="example-form-field">
+        <mat-label>Digite seu E-mail</mat-label>
+        <input matInput type="email" [(ngModel)]="form.value.email" formControlName="email">
+        <button *ngIf="form.value.email" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.email=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field class="example-form-field">
+        <mat-label>Digite seu telefone</mat-label>
+        <input matInput type="tel" [(ngModel)]="form.value.fone" formControlName="fone">
+        <button *ngIf="form.value.fone" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.fone=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+
+      <button mat-stroked-button>Download</button>
+
+      <span class="textconf">E-book “Olhe para o alto” Bispos Lucas e Priscila Rodovalho Cunha</span>
+
+    </form>
+  </section>
+</div>
