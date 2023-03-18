@@ -1,7 +1,10 @@
 <div class="myContainer d-flex align-items-center justify-content-center">
+
+  <img class="imgLogo" src="../../assets/logo.png" alt="20 anos decidindo destinos">
+
   <section>
-    <form class="d-flex flex-column"  [formGroup]="form">
-      <mat-form-field class="example-form-field">
+    <form class="d-flex flex-column align-items-center" (ngSubmit)="downloadEbook()" [formGroup]="form">
+      <mat-form-field class="fieldForm mb-3">
         <mat-label>Digite seu nome</mat-label>
         <input matInput type="text" [(ngModel)]="form.value.name" formControlName="name">
         <button *ngIf="form.value.name" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.name=''">
@@ -9,7 +12,7 @@
         </button>
 
       </mat-form-field>
-      <mat-form-field class="example-form-field">
+      <mat-form-field class="fieldForm mb-3">
         <mat-label>Digite seu E-mail</mat-label>
         <input matInput type="email" [(ngModel)]="form.value.email" formControlName="email">
         <button *ngIf="form.value.email" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.email=''">
@@ -17,19 +20,19 @@
         </button>
       </mat-form-field>
 
-      <mat-form-field class="example-form-field">
+      <mat-form-field class="fieldForm">
         <mat-label>Digite seu telefone</mat-label>
-        <input matInput type="tel" [(ngModel)]="form.value.fone" formControlName="fone">
+        <input matInput type="tel" [(ngModel)]="form.value.fone" formControlName="fone" maxlength="10" mask='(00) 00000-0000'>
         <button *ngIf="form.value.fone" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.fone=''">
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
 
+      <button mat-stroked-button class="buttonDownload mt-3 mb-3" type="submit">
+        <img src="../../assets/Download.svg" alt="download">
+      </button>
 
-      <button mat-stroked-button>Download</button>
-
-      <span class="textconf">E-book “Olhe para o alto” Bispos Lucas e Priscila Rodovalho Cunha</span>
-
+      <span class="textconf mt-3">E-book “Olhe para o alto” Bispos Lucas e Priscila Rodovalho Cunha</span>
     </form>
   </section>
 </div>
