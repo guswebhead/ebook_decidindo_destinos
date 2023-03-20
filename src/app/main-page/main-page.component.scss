@@ -26,6 +26,13 @@
     border-top-right-radius: 90% 100%;
   }
 
+  .buttonInvalid{
+    width: 70%;
+    height: 60px;
+    border: none;
+    opacity: 0.5;
+  }
+
   .textconf {
     font-family: 'VT323', monospace;
 

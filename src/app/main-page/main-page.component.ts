@@ -39,7 +39,6 @@ export class MainPageComponent {
   }
 
   onSubmit() {
-    console.log(this.form.value)
     this.netlifyForms.submitFeedback(this.form.value).subscribe(
        () => {
          //  this.router.navigateByUrl('/success');
