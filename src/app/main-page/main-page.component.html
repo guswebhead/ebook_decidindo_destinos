@@ -22,7 +22,7 @@
 
       <mat-form-field class="fieldForm">
         <mat-label>Digite seu telefone</mat-label>
-        <input matInput type="tel" [(ngModel)]="form.value.fone" formControlName="fone" maxlength="10" mask='(00) 00000-0000'>
+        <input matInput type="tel" [(ngModel)]="form.value.fone" formControlName="fone" maxlength="11" mask='(00) 00000-0000'>
         <button *ngIf="form.value.fone" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.fone=''">
           <mat-icon>close</mat-icon>
         </button>
