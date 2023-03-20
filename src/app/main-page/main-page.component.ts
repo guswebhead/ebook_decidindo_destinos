@@ -40,10 +40,10 @@ export class MainPageComponent {
 
   onSubmit() {
     console.log(this.form.value)
-    this.netlifyForms.submitFeedback({name: 'Gustavo', email: 'email', tel: 'asidaiosd'}).subscribe(
+    this.netlifyForms.submitFeedback(this.form.value).subscribe(
        () => {
+         //  this.router.navigateByUrl('/success');
          this.form.reset();
-        //  this.router.navigateByUrl('/success');
         Swal.fire({
           icon: 'success',
           title: 'Sucesso!',

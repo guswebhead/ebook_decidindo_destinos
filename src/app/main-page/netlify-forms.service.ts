@@ -11,7 +11,7 @@ export class NetlifyFormsService {
 
   constructor(private http: HttpClient) { }
 
-  submitFeedback(fbEntry: FormDownload): Observable<any> {
+  submitFeedback(fbEntry: any): Observable<any> {
     const entry = new HttpParams({ fromObject: {
       'form-name': 'contact',
       ...fbEntry
