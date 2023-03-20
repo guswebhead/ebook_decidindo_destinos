@@ -3,7 +3,14 @@
   <img class="imgLogo" src="../../assets/logo.png" alt="20 anos decidindo destinos">
 
   <section>
-    <form name="contact" class="d-flex flex-column align-items-center" (ngSubmit)="downloadEbook()" [formGroup]="form" method="POST" data-netlify="true">
+    <form
+    [formGroup]="form"
+    (ngSubmit)="downloadEbook()"
+    name="contact"
+    method="POST"
+    onSubmit="submit"
+    data-netlify="true"
+    class="d-flex flex-column align-items-center">
       <mat-form-field class="fieldForm mb-3">
         <mat-label>Digite seu nome</mat-label>
         <input matInput type="text" [(ngModel)]="form.value.name" formControlName="name" name="name">
