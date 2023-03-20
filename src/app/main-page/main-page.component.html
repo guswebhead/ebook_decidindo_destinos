@@ -4,16 +4,13 @@
 
   <section>
     <form
-    [formGroup]="form"
-    (ngSubmit)="downloadEbook()"
+    data-netlify="true"
     name="contact"
     method="POST"
-    onSubmit="submit"
-    data-netlify="true"
-    class="d-flex flex-column align-items-center" netlify>
+    class="d-flex flex-column align-items-center">
       <mat-form-field class="fieldForm mb-3">
         <mat-label>Digite seu nome</mat-label>
-        <input matInput type="text" [(ngModel)]="form.value.name" formControlName="name" name="name">
+        <input matInput type="text"  name="name">
         <button *ngIf="form.value.name" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.name=''">
           <mat-icon>close</mat-icon>
         </button>
@@ -21,7 +18,7 @@
       </mat-form-field>
       <mat-form-field class="fieldForm mb-3">
         <mat-label>Digite seu E-mail</mat-label>
-        <input matInput type="email" [(ngModel)]="form.value.email" formControlName="email" name="email">
+        <input matInput type="email" name="email">
         <button *ngIf="form.value.email" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.email=''">
           <mat-icon>close</mat-icon>
         </button>
@@ -29,7 +26,7 @@
 
       <mat-form-field class="fieldForm">
         <mat-label>Digite seu telefone</mat-label>
-        <input matInput type="tel" [(ngModel)]="form.value.fone" formControlName="fone" maxlength="11" name="tel">
+        <input matInput type="tel" maxlength="11" name="tel">
         <button *ngIf="form.value.fone" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.fone=''">
           <mat-icon>close</mat-icon>
         </button>
@@ -42,4 +39,5 @@
       <span class="textconf mt-3">E-book “Olhe para o alto” Bispos Lucas e Priscila Rodovalho Cunha</span>
     </form>
   </section>
+
 </div>
