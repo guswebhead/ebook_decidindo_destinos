@@ -9,11 +9,16 @@ import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { SucessComponent } from './main-page/responsePages/sucess/sucess.component';
+import { PageNotFoundComponent } from './main-page/responsePages/page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent
+    MainPageComponent,
+    SucessComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +28,7 @@ import {MatButtonModule} from '@angular/material/button';
     ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

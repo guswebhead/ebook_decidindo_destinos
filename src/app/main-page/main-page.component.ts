@@ -1,6 +1,8 @@
+import { NetlifyFormsService } from './netlify-forms.service';
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,14 +12,19 @@ import { Validators } from '@angular/forms';
 })
 export class MainPageComponent {
 
-  form = new FormGroup({
-    name: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.required, Validators.email] ),
-    fone: new FormControl('', [Validators.required, Validators.pattern(/[0-9\+\-\ ]/)])
+  form = this.fb.group({
+    name: ['', Validators.required],
+    email: ['', [Validators.email, Validators.required]],
+    tel: ['', Validators.required],
   });
 
+  errorMsg = '';
 
-  constructor(){
+  constructor(
+    private fb: FormBuilder,
+    private netlifyForms: NetlifyFormsService,
+    private router: Router
+  ){
 
   }
 
@@ -26,9 +33,21 @@ export class MainPageComponent {
 
   }
 
-  downloadEbook(){
-    // console.log(this.form.value)
+  closeError() {
+    this.errorMsg = '';
   }
 
+  onSubmit() {
+    console.log(this.form.value)
+    this.netlifyForms.submitFeedback({name: 'Gustavo', email: 'email', tel: 'asidaiosd'}).subscribe(
+       () => {
+         this.form.reset();
+         this.router.navigateByUrl('/success');
+       },
+       err => {
+         this.errorMsg = err;
+       }
+     );
+    }
 
 }
