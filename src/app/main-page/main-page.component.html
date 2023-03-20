@@ -4,10 +4,11 @@
 
   <section>
     <form
-    action=""
     name="contact"
-    netlify
-    class="d-flex flex-column align-items-center">
+    method="POST"
+    data-netlify="true"
+    class="d-flex flex-column align-items-center" netlify>
+    <!-- <input type="hidden" name="form-name" value="contact" /> -->
       <mat-form-field class="fieldForm mb-3">
         <mat-label>Digite seu nome</mat-label>
         <input matInput type="text"  name="name">
@@ -18,7 +19,7 @@
       </mat-form-field>
       <mat-form-field class="fieldForm mb-3">
         <mat-label>Digite seu E-mail</mat-label>
-        <input matInput type="email" name="email">
+        <input matInput type="email"  name="email">
         <button *ngIf="form.value.email" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.email=''">
           <mat-icon>close</mat-icon>
         </button>
@@ -26,7 +27,7 @@
 
       <mat-form-field class="fieldForm">
         <mat-label>Digite seu telefone</mat-label>
-        <input matInput type="tel" maxlength="11" name="tel">
+        <input matInput type="tel"  maxlength="11" name="tel">
         <button *ngIf="form.value.fone" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.fone=''">
           <mat-icon>close</mat-icon>
         </button>
