@@ -3,10 +3,10 @@
   <img class="imgLogo" src="../../assets/logo.png" alt="20 anos decidindo destinos">
 
   <section>
-    <form class="d-flex flex-column align-items-center" (ngSubmit)="downloadEbook()" [formGroup]="form" method="POST" data-netlify="true">
+    <form name="contact" class="d-flex flex-column align-items-center" (ngSubmit)="downloadEbook()" [formGroup]="form" method="POST" data-netlify="true">
       <mat-form-field class="fieldForm mb-3">
         <mat-label>Digite seu nome</mat-label>
-        <input matInput type="text" [(ngModel)]="form.value.name" formControlName="name">
+        <input matInput type="text" [(ngModel)]="form.value.name" formControlName="name" name="name">
         <button *ngIf="form.value.name" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.name=''">
           <mat-icon>close</mat-icon>
         </button>
@@ -14,7 +14,7 @@
       </mat-form-field>
       <mat-form-field class="fieldForm mb-3">
         <mat-label>Digite seu E-mail</mat-label>
-        <input matInput type="email" [(ngModel)]="form.value.email" formControlName="email">
+        <input matInput type="email" [(ngModel)]="form.value.email" formControlName="email" name="email">
         <button *ngIf="form.value.email" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.email=''">
           <mat-icon>close</mat-icon>
         </button>
@@ -22,7 +22,7 @@
 
       <mat-form-field class="fieldForm">
         <mat-label>Digite seu telefone</mat-label>
-        <input matInput type="tel" [(ngModel)]="form.value.fone" formControlName="fone" maxlength="11" mask='(00) 00000-0000'>
+        <input matInput type="tel" [(ngModel)]="form.value.fone" formControlName="fone" maxlength="11" name="tel">
         <button *ngIf="form.value.fone" matSuffix mat-icon-button aria-label="Clear" (click)="form.value.fone=''">
           <mat-icon>close</mat-icon>
         </button>

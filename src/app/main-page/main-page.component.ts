@@ -27,7 +27,7 @@ export class MainPageComponent {
   }
 
   downloadEbook(){
-    console.log(this.form.value)
+    // console.log(this.form.value)
   }
 
 
