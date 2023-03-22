@@ -64,3 +64,21 @@
   }
 
 }
+
+// TABLET SCREEN
+@media (max-width: 768px)
+{
+  .imgLogo{
+    left: 5% !important;
+    width: 335px;
+  }
+}
+
+// MOBILE SCREEN
+@media (max-width: 414px)
+{
+  section{
+    width: 80%;
+  }
+}
+
