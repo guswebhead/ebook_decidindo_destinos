@@ -46,7 +46,7 @@ export class MainPageComponent {
         Swal.fire({
           icon: 'success',
           title: 'Sucesso!',
-          text: 'Enviamos uma mensagem no seu email',
+          text: 'O arquivo foi disponibilizado em uma nova aba!',
           footer: ''
         })
         window.open('https://app-sara-connect.s3.sa-east-1.amazonaws.com/OLHE+PARA+O+ALTO.pdf', '_blank');
