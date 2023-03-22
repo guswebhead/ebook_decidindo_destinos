@@ -49,9 +49,9 @@ export class MainPageComponent {
           text: 'Enviamos uma mensagem no seu email',
           footer: ''
         })
-       },
-       err => {
-        console.log(err)
+        window.open('https://app-sara-connect.s3.sa-east-1.amazonaws.com/OLHE+PARA+O+ALTO.pdf', '_blank');
+      },
+      err => {
          this.errorMsg = err;
          Swal.fire({
           icon: 'error',
